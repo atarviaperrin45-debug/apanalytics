@@ -3,170 +3,472 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Atarvia Perrin's professional data analytics portfolio featuring Power BI, Excel, Python, SQL, and AP Analytics.">
   <title>Atarvia Perrin | Data Analytics Portfolio</title>
 
   <style>
-   * {
-  box-sizing: border-box;
-}
+    :root {
+      --blush: #f8dde3;
+      --rose: #a85669;
+      --dark-rose: #854052;
+      --ivory: #fffaf7;
+      --gold: #b38a36;
+      --mocha: #493b3d;
+      --white: #ffffff;
+    }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #fffaf9;
-  color: #493b3d;
-  line-height: 1.6;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-header {
-  background: linear-gradient(135deg, #e8b4bc, #f8dfe3);
-  color: #56383f;
-  text-align: center;
-  padding: 85px 20px;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-header h1 {
-  font-size: 44px;
-  margin-bottom: 10px;
-}
+    body {
+      margin: 0;
+      background: var(--ivory);
+      color: var(--mocha);
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+    }
 
-header p {
-  font-size: 19px;
-}
+    h1, h2, h3 {
+      font-family: Georgia, serif;
+    }
 
-nav {
-  background: #b76e79;
-  padding: 17px;
-  text-align: center;
-}
+    a {
+      color: inherit;
+    }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 12px;
-  font-weight: bold;
-}
+    /* NAVIGATION */
 
-nav a:hover {
-  color: #f7e7ce;
-}
+    nav {
+      background: var(--white);
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+    }
 
-section {
-  max-width: 1000px;
-  margin: 35px auto;
-  padding: 35px;
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(183, 110, 121, 0.12);
-}
+    .logo {
+      font-family: Georgia, serif;
+      font-size: 24px;
+      color: var(--rose);
+      font-weight: bold;
+    }
 
-h2 {
-  color: #b76e79;
-  border-bottom: 2px solid #d4af37;
-  padding-bottom: 10px;
-}
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
 
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
+    .nav-links a {
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
 
-.skill {
-  background: #fbe7eb;
-  color: #8f4e5c;
-  padding: 10px 18px;
-  border-radius: 20px;
-  font-weight: bold;
-}
+    .nav-links a:hover {
+      color: var(--rose);
+    }
 
-.project {
-  background: #fff0f3;
-  padding: 25px;
-  border-radius: 12px;
-  margin-top: 20px;
-  border-left: 4px solid #d4af37;
-}
+    /* HERO SECTION */
 
-.button {
-  display: inline-block;
-  background: #b76e79;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 8px;
-  text-decoration: none;
-  margin-top: 12px;
-}
+    .hero {
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 60px;
+      padding: 90px 10%;
+      background: linear-gradient(
+        120deg,
+        #fffaf7 35%,
+        #f8dde3 100%
+      );
+    }
 
-.button:hover {
-  background: #94515e;
-}
+    .hero-text {
+      max-width: 580px;
+    }
 
-footer {
-  background: #b76e79;
-  color: white;
-  text-align: center;
-  padding: 25px;
-  margin-top: 40px;
-}
+    .eyebrow {
+      color: var(--rose);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 13px;
+      font-weight: bold;
+    }
 
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 30px;
-  }
+    h1 {
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1.15;
+      font-weight: normal;
+      margin: 20px 0;
+    }
 
-  nav a {
-    display: inline-block;
-    margin: 6px;
-  }
+    h1 span {
+      color: var(--rose);
+    }
 
-  section {
-    margin: 15px;
-    padding: 22px;
-  }
-}
+    .hero-subtitle {
+      font-size: 19px;
+      font-weight: bold;
+      color: var(--dark-rose);
+    }
+
+    .hero-description {
+      font-size: 17px;
+      max-width: 520px;
+    }
+
+    /* PROFILE PHOTO */
+
+    .hero-photo {
+      width: 330px;
+      height: 420px;
+      flex-shrink: 0;
+      border: 8px solid white;
+      outline: 2px solid var(--gold);
+      border-radius: 170px 170px 12px 12px;
+      overflow: hidden;
+      box-shadow: 15px 18px 0 rgba(179,138,54,0.18);
+      background: var(--blush);
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      display: block;
+    }
+
+    /* BUTTONS */
+
+    .btn {
+      display: inline-block;
+      background: var(--rose);
+      color: white;
+      padding: 13px 25px;
+      margin: 15px 10px 0 0;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: var(--dark-rose);
+      transform: translateY(-3px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--rose);
+      border: 1px solid var(--rose);
+    }
+
+    .btn-outline:hover {
+      color: white;
+    }
+
+    /* GENERAL SECTIONS */
+
+    section {
+      padding: 85px 10%;
+      max-width: 1300px;
+      margin: auto;
+    }
+
+    .section-title {
+      color: var(--rose);
+      font-size: 38px;
+      font-weight: normal;
+      margin-bottom: 15px;
+    }
+
+    .gold-line {
+      width: 75px;
+      height: 3px;
+      background: var(--gold);
+      margin-bottom: 30px;
+    }
+
+    .section-intro {
+      max-width: 850px;
+      font-size: 17px;
+    }
+
+    /* SKILLS */
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .skill {
+      background: white;
+      color: var(--dark-rose);
+      padding: 13px 23px;
+      border-radius: 30px;
+      border: 1px solid #e8c6cb;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    /* PROJECTS */
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 300px), 1fr)
+      );
+      gap: 30px;
+      margin-top: 35px;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .project-image {
+      height: 200px;
+      background: linear-gradient(
+        135deg,
+        #e8b4bc,
+        #f8dde3
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 25px;
+      color: var(--dark-rose);
+      font-family: Georgia, serif;
+      font-size: 25px;
+    }
+
+    .project-content {
+      padding: 30px;
+    }
+
+    .project-content h3 {
+      color: var(--rose);
+      font-size: 24px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #fff0f3;
+      color: var(--dark-rose);
+      padding: 7px 13px;
+      border-radius: 20px;
+      font-size: 12px;
+      margin: 5px 5px 5px 0;
+    }
+
+    /* BUSINESS */
+
+    .business-box {
+      background: #fff0f3;
+      border-left: 4px solid var(--gold);
+      border-radius: 12px;
+      padding: 40px;
+    }
+
+    .business-box h3 {
+      color: var(--dark-rose);
+      font-size: 26px;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      text-align: center;
+      background: #fff0f3;
+      max-width: none;
+    }
+
+    .contact .gold-line {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--dark-rose);
+      color: white;
+      text-align: center;
+      padding: 30px;
+      font-size: 13px;
+    }
+
+    /* MOBILE DESIGN */
+
+    @media (max-width: 850px) {
+      nav {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 65px 7%;
+        gap: 45px;
+      }
+
+      .hero-photo {
+        width: 270px;
+        height: 350px;
+      }
+
+      section {
+        padding: 60px 7%;
+      }
+
+      .section-title {
+        font-size: 32px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .btn, .project-card {
+        transition: none;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Atarvia Perrin</h1>
-    <p>Data Analytics | Business Intelligence | Data Visualization</p>
-    <p>Turning Data Into Meaningful Insights</p>
-  </header>
+  <!-- NAVIGATION -->
 
   <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#business">AP Analytics</a>
-    <a href="#contact">Contact</a>
+    <div class="logo">Atarvia Perrin ✦</div>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#business">AP Analytics</a>
+      <a href="#contact">Contact</a>
+    </div>
   </nav>
 
+  <!-- HOMEPAGE -->
+
+  <header class="hero">
+
+    <div class="hero-text">
+
+      <div class="eyebrow">
+        Welcome to My Portfolio
+      </div>
+
+      <h1>
+        Hello, I'm<br>
+        <span>Atarvia Perrin.</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Aspiring Data Analyst |
+        Business Intelligence |
+        Data Visualization
+      </p>
+
+      <p class="hero-description">
+        Turning complex data into meaningful insights,
+        uncovering opportunities, and helping organizations
+        make informed decisions through the power of analytics.
+      </p>
+
+      <a href="#projects" class="btn">
+        View My Projects
+      </a>
+
+      <a href="#about" class="btn btn-outline">
+        About Me
+      </a>
+
+    </div>
+
+    <div class="hero-photo">
+      <img
+        src="atarvia-profile.png"
+        alt="Professional portrait of Atarvia Perrin"
+      >
+    </div>
+
+  </header>
+
+  <!-- ABOUT ME -->
+
   <section id="about">
-    <h2>About Me</h2>
-    <p>
-      Welcome to my data analytics portfolio! I am Atarvia Perrin,
-      an aspiring data analyst passionate about transforming raw data
-      into meaningful insights that support informed decision-making.
+
+    <h2 class="section-title">
+      A Little About Me
+    </h2>
+
+    <div class="gold-line"></div>
+
+    <p class="section-intro">
+      I'm Atarvia Perrin, an aspiring data analyst
+      passionate about transforming complex information
+      into meaningful insights.
     </p>
 
-    <p>
-      My interests include data visualization, business intelligence,
-      educational analytics, and using data to help organizations
-      identify opportunities for improvement.
+    <p class="section-intro">
+      My interests include business intelligence,
+      educational analytics, data visualization,
+      and helping organizations make data-driven decisions.
     </p>
 
-    <p>
-      Through hands-on projects, I am developing my technical skills
-      while exploring how analytics can create positive organizational
-      and community outcomes.
+    <p class="section-intro">
+      Through hands-on projects, I am continuously
+      developing my technical skills in Microsoft Excel,
+      Power BI, SQL, and Python.
     </p>
+
   </section>
 
+  <!-- TECHNICAL SKILLS -->
+
   <section id="skills">
-    <h2>Technical Skills</h2>
+
+    <h2 class="section-title">
+      My Technical Skills
+    </h2>
+
+    <div class="gold-line"></div>
 
     <div class="skills">
       <span class="skill">Microsoft Excel</span>
@@ -176,75 +478,154 @@ footer {
       <span class="skill">Data Visualization</span>
       <span class="skill">Data Cleaning</span>
       <span class="skill">Business Intelligence</span>
+      <span class="skill">Dashboard Development</span>
     </div>
+
   </section>
+
+  <!-- PROJECTS -->
 
   <section id="projects">
-    <h2>Featured Projects</h2>
 
-    <div class="project">
-      <h3>Student Success Navigator</h3>
+    <h2 class="section-title">
+      Featured Projects
+    </h2>
 
-      <p>
-        A student success analytics project designed to help
-        educational institutions identify students who may benefit
-        from additional academic support.
-      </p>
+    <div class="gold-line"></div>
 
-      <p>
-        The Power BI dashboard explores student attendance,
-        academic performance, grade distribution, and risk levels
-        to support data-informed intervention planning.
-      </p>
+    <p>
+      Explore my growing collection of data analytics projects.
+    </p>
 
-      <p><strong>Tools:</strong> Power BI, Excel</p>
+    <div class="project-grid">
+
+      <article class="project-card">
+
+        <div class="project-image">
+          Student Success Navigator
+        </div>
+
+        <div class="project-content">
+
+          <h3>Student Success Navigator</h3>
+
+          <p>
+            An interactive Power BI dashboard designed
+            to analyze student academic performance
+            and identify students who may benefit
+            from additional academic support.
+          </p>
+
+          <p>
+            The dashboard explores attendance,
+            GPA, grade distribution, and student risk levels.
+          </p>
+
+          <span class="tag">Power BI</span>
+          <span class="tag">Excel</span>
+          <span class="tag">Data Visualization</span>
+
+        </div>
+
+      </article>
+
+      <article class="project-card">
+
+        <div class="project-image">
+          More Projects Coming Soon
+        </div>
+
+        <div class="project-content">
+
+          <h3>Future Analytics Projects</h3>
+
+          <p>
+            I'm expanding my portfolio with projects
+            involving SQL analysis, Python visualizations,
+            Excel reporting, and business intelligence.
+          </p>
+
+          <span class="tag">Python</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Analytics</span>
+
+        </div>
+
+      </article>
+
     </div>
 
-    <div class="project">
-      <h3>More Projects Coming Soon</h3>
-
-      <p>
-        Future projects will explore SQL analysis, Python
-        visualizations, and interactive business intelligence
-        dashboards.
-      </p>
-    </div>
   </section>
+
+  <!-- AP ANALYTICS -->
 
   <section id="business">
-    <h2>AP Analytics</h2>
 
-    <p>
-      AP Analytics is a developing data analytics business focused
-      on helping nonprofit organizations transform raw data into
-      clear, actionable insights.
-    </p>
+    <h2 class="section-title">
+      Introducing AP Analytics
+    </h2>
 
-    <p>
-      The goal is to make data more accessible through meaningful
-      reporting, visualizations, and analytics solutions that
-      support organizational decision-making.
-    </p>
+    <div class="gold-line"></div>
+
+    <div class="business-box">
+
+      <h3>
+        Data With Purpose. Insights With Impact.
+      </h3>
+
+      <p>
+        AP Analytics is my developing data analytics
+        business focused on helping nonprofit
+        organizations transform raw data into
+        clear, actionable insights.
+      </p>
+
+      <p>
+        My vision is to make data more accessible
+        through reporting, dashboards, and
+        visualizations that support informed
+        decision-making.
+      </p>
+
+    </div>
+
   </section>
 
-  <section id="contact">
-    <h2>Connect With Me</h2>
+  <!-- CONTACT -->
+
+  <section id="contact" class="contact">
+
+    <h2 class="section-title">
+      Let's Connect
+    </h2>
+
+    <div class="gold-line"></div>
 
     <p>
-      Interested in my projects or professional work?
-      Connect with me on GitHub.
+      Interested in my projects, professional journey,
+      or future collaborations?
     </p>
 
-    <a class="button"
-       href="https://github.com/atarviaperrin45-debugb"
-       target="_blank"
-       rel="noopener noreferrer">
-       View My GitHub
+    <p>
+      I'd love to connect!
+    </p>
+
+    <a
+      href="https://github.com/atarviaperrin45-debugb"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn"
+    >
+      Visit My GitHub
     </a>
+
   </section>
+
+  <!-- FOOTER -->
 
   <footer>
-    <p>&copy; 2026 Atarvia Perrin | Data Analytics Portfolio</p>
+    &copy; 2026 Atarvia Perrin |
+    Data Analytics Portfolio
   </footer>
 
 </body>
