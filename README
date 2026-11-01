@@ -1,0 +1,55 @@
+# MBA Admissions Analytics Dashboard
+
+## Project Overview
+
+This project explores MBA applicant characteristics and admission outcomes using Power BI. The dashboard provides insights into applicant demographics, academic qualifications, and professional backgrounds.
+
+The purpose of this project is to demonstrate how data visualization and analytics can support decision-making in higher education admissions.
+
+## Project Objectives
+
+- Analyze demographic trends among MBA applicants.
+- Examine undergraduate GPA and GMAT scores.
+- Identify common undergraduate majors and professional industries.
+- Compare academic qualifications across recorded admission outcomes.
+- Explore relationships between GPA, GMAT scores, and admission decisions.
+
+## Dataset
+
+The dataset contains 6,194 MBA applications, including information on gender, undergraduate GPA, GMAT scores, work experience, academic major, and admission status.
+
+## Tools Used
+
+- **Power BI Desktop:** Dashboard development and visualization.
+- **CSV:** Data storage and import.
+- **GitHub:** Project documentation and portfolio hosting.
+
+## Dashboard Features
+
+The dashboard includes four key performance indicators:
+
+1. Total MBA Applicants
+2. Average Undergraduate GPA
+3. Average GMAT Score
+4. Average Work Experience
+
+Additional visualizations examine applicant demographics, undergraduate majors, professional industries, admission outcomes, and the relationship between GPA and GMAT scores.
+
+## Data Limitations
+
+A substantial portion of the dataset contains missing admission outcomes. Therefore, admission-related comparisons are limited to applications with recorded decisions.
+
+Missing admission values are not automatically classified as rejections.
+
+## Conclusion
+
+This project demonstrates the application of business intelligence tools to higher education admissions data. Through Power BI, applicant information is transformed into visualizations that support exploratory analysis and data-informed decision-making.
+
+## Skills Demonstrated
+
+- Data Visualization
+- Business Intelligence
+- Descriptive Analytics
+- Higher Education Analytics
+- Power BI Dashboard Development
+- Data Interpretation
